@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="background-color: gray;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta lang="en-us">
+    <title>AO Games Space Shooter</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #game-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
+  </head>
+  <body>
+    <div id="game-container"></div>
+    <script type="module">
+      import { dryrun, message, createDataItemSigner } from 'https://cdn.jsdelivr.net/npm/@permaweb/aoconnect@latest';
+      window.dryrun = dryrun;
+      window.message = message;
+      window.createDataItemSigner = createDataItemSigner;
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
